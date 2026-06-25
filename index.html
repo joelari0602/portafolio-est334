@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Estadística Espacial EST334</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+    <!-- Canvas de partículas de datos -->
+    <canvas id="cosmos-canvas"></canvas>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-bracket">[</span>EST<span class="logo-accent">334</span><span class="logo-bracket">]</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio" data-text="Inicio">Inicio</a></li>
+            <li><a href="#sobre-mi" data-text="Sobre Mí">Sobre Mí</a></li>
+            <li><a href="#unidad1" data-text="Unidad I">Unidad I</a></li>
+            <li><a href="#unidad2" data-text="Unidad II">Unidad II</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span class="mono-text">ONLINE</span>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge sr-top">
+                <span class="badge-pulse"></span>
+                <span class="mono-text">UNA PUNO · 2025</span>
+            </div>
+            <h2 class="hero-subtitle sr-top">Universidad Nacional del Altiplano</h2>
+            <h1 class="hero-title sr-top">
+                <span class="title-line">Estadística</span>
+                <span class="title-line accent-line" data-text="Espacial">Espacial</span>
+            </h1>
+            <p class="hero-description sr-top">
+                Análisis geoespacial · Modelamiento estadístico · Ciencia de datos territoriales
+            </p>
+            <div class="hero-actions sr-top">
+                <a href="#sobre-mi" class="btn-primary">
+                    <span>Explorar Portafolio</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">2</span>
+                        <span class="stat-label">Unidades</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">X</span>
+                        <span class="stat-label">Semestre</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorador de coordenadas -->
+        <div class="coord-display">
+            <span class="mono-text">LAT: -15.840°S</span>
+            <span class="mono-text">LON: -70.021°O</span>
+            <span class="mono-text">ALT: 3,827m</span>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="about">
+        <div class="section-label sr-top">
+            <span class="mono-text">// PERFIL.01</span>
+        </div>
+        <div class="about-container">
+            <div class="about-card glass-card sr-bottom">
+                <div class="card-corner top-left"></div>
+                <div class="card-corner top-right"></div>
+                <div class="card-corner bottom-left"></div>
+                <div class="card-corner bottom-right"></div>
+
+                <div class="about-header">
+                    <div class="avatar-ring">
+                        <div class="avatar-inner">
+                            <span class="mono-text">CJM</span>
+                        </div>
+                    </div>
+                    <div class="about-title">
+                        <h3 class="label-text">Estudiante</h3>
+                        <h2>Clever Joel<br><span class="accent">Mamani Ari</span></h2>
+                    </div>
+                </div>
+
+                <div class="about-meta">
+                    <div class="meta-item">
+                        <span class="meta-key mono-text">CÓDIGO</span>
+                        <span class="meta-val">217520</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-key mono-text">SEMESTRE</span>
+                        <span class="meta-val">X</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-key mono-text">DOCENTE</span>
+                        <span class="meta-val">Fred Torres Cruz</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-key mono-text">ESCUELA</span>
+                        <span class="meta-val">Ing. Estadística e Informática</span>
+                    </div>
+                </div>
+
+                <p class="about-bio">
+                    Estudiante entusiasta de la ciencia de datos y el análisis territorial para la toma de decisiones. Este portafolio documenta el progreso en la aplicación de metodologías geoespaciales.
+                </p>
+
+                <div class="about-actions">
+                    <a href="assets/docs/tu-cv.pdf" target="_blank" class="btn-ghost">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        <span>Descargar CV</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Elemento decorativo lateral -->
+            <div class="about-deco sr-top">
+                <div class="deco-chart">
+                    <div class="deco-bar" style="--h:40%"><span class="mono-text">R</span></div>
+                    <div class="deco-bar" style="--h:75%"><span class="mono-text">Python</span></div>
+                    <div class="deco-bar" style="--h:60%"><span class="mono-text">QGIS</span></div>
+                    <div class="deco-bar" style="--h:50%"><span class="mono-text">SQL</span></div>
+                </div>
+                <span class="deco-label mono-text">Stack Técnico</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN UNIDAD I -->
+
+<section id="unidad1" style="padding: 50px 20px;">
+    <h2 style="color: #003366; text-align: center; margin-bottom: 30px;">Unidad I: Análisis Exploratorio</h2>
+    
+    <div class="tarea-card" style="
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+        padding: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        box-shadow: 0 8px 32px 0 rgba(0, 32, 90, 0.1);">
+        
+        <h3 style="color: #003366;">Tarea 1: Introducción y Conceptos Base</h3>
+        <p>Documento Quarto incrustado interactivamente.</p>
+        
+        <iframe 
+            src="tareas/tarea1.html" 
+            width="100%" 
+            height="500px" 
+            style="border: none; border-radius: 8px; background-color: white;" 
+            title="Tarea 1 Quarto">
+        </iframe>
+        
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="unidad1" class="unit-section" style="padding: 50px 20px;">
+        <div class="section-label sr-top">
+            <span class="mono-text">// MÓDULO.01</span>
+        </div>
+        <div class="section-header sr-top">
+            <h2 class="section-title">Unidad <span class="accent">I</span></h2>
+            <p class="section-desc">Análisis Exploratorio de Datos Espaciales y Teledetección</p>
+        </div>
+
+        <div class="projects-grid" style="display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            
+            <div class="project-card glass-card sr-bottom" data-index="01" style="grid-column: 1 / -1;">
+                <div class="card-corner top-left"></div>
+                <div class="card-corner top-right"></div>
+                <div class="project-index mono-text">01</div>
+                <div class="project-tag">Teoría / Quarto</div>
+                <h3 class="project-title">Conceptos Base y Sistemas de Coordenadas</h3>
+                <p class="project-desc">Documento interactivo sobre la estadística espacial, Primera Ley de Tobler, sistemas de coordenadas, datum WGS 84 y proyecciones UTM.</p>
+                <div class="project-tags">
+                    <span class="tag">Quarto</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">Teoría Espacial</span>
+                </div>
+                
+                <div style="margin-top: 25px; border-radius: 8px; overflow: hidden; box-shadow: inset 0 0 10px rgba(0,0,0,0.05);">
+                    <iframe 
+                        src="assets/docs/tareas/tarea1.html" 
+                        width="100%" 
+                        height="500px" 
+                        style="border: none; background-color: #fcfcfc;" 
+                        title="Tarea 1 Quarto">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="project-card glass-card sr-bottom" data-index="02">
+                <div class="card-corner top-left"></div>
+                <div class="card-corner top-right"></div>
+                <div class="project-index mono-text">02</div>
+                <div class="project-tag">Práctica Visual</div>
+                <h3 class="project-title">Mapas Raster y Vector</h3>
+                <p class="project-desc">Representación de datos geográficos. Diferenciación visual e interactiva entre datos vectoriales (puntos/polígonos) y raster (superficies).</p>
+                <div class="project-tags">
+                    <span class="tag">R (sf/terra)</span>
+                    <span class="tag">Leaflet</span>
+                    <span class="tag">QGIS</span>
+                </div>
+                <a href="#tarea2" class="project-link">
+                    <span>En Desarrollo...</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <div class="project-card glass-card sr-bottom" data-index="03">
+                <div class="card-corner top-left"></div>
+                <div class="card-corner top-right"></div>
+                <div class="project-index mono-text">03</div>
+                <div class="project-tag">Análisis de Datos</div>
+                <h3 class="project-title">Análisis de Correlación Espacial</h3>
+                <p class="project-desc">Visualización y análisis exploratorio de ubicación espacial utilizando datos de la Encuesta Nacional Agraria.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Geopandas</span>
+                    <span class="tag">GeoDa</span>
+                </div>
+                <a href="#tarea3" class="project-link">
+                    <span>En Desarrollo...</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SECCIÓN UNIDAD II -->
+    <section id="unidad2" class="unit-section">
+        <div class="section-label sr-top">
+            <span class="mono-text">// MÓDULO.02</span>
+        </div>
+        <div class="section-header sr-top">
+            <h2 class="section-title">Unidad <span class="accent">II</span></h2>
+            <p class="section-desc">Modelos avanzados de interpolación y geoestadística</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Proyecto 4 -->
+            <div class="project-card glass-card sr-bottom" data-index="04">
+                <div class="card-corner top-left"></div>
+                <div class="card-corner top-right"></div>
+                <div class="project-index mono-text">04</div>
+                <div class="project-tag">Proyecto</div>
+                <h3 class="project-title">Título del Proyecto 4</h3>
+                <p class="project-desc">Descripción breve del proyecto. Kriging y modelos de variograma para datos espaciales.</p>
+                <div class="project-tags">
+                    <span class="tag">R</span>
+                    <span class="tag">Kriging</span>
+                </div>
+                <a href="#" class="project-link">
+                    <span>Ver Proyecto</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <!-- Proyecto 5 -->
+            <div class="project-card glass-card sr-bottom" data-index="05">
+                <div class="card-corner top-left"></div>
+                <div class="card-corner top-right"></div>
+                <div class="project-index mono-text">05</div>
+                <div class="project-tag">Proyecto</div>
+                <h3 class="project-title">Título del Proyecto 5</h3>
+                <p class="project-desc">Descripción breve del proyecto. Autocorrelación espacial y estadísticos de Moran.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PySAL</span>
+                </div>
+                <a href="#" class="project-link">
+                    <span>Ver Proyecto</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <!-- Proyecto 6 -->
+            <div class="project-card glass-card sr-bottom" data-index="06">
+                <div class="card-corner top-left"></div>
+                <div class="card-corner top-right"></div>
+                <div class="project-index mono-text">06</div>
+                <div class="project-tag">Proyecto</div>
+                <h3 class="project-title">Título del Proyecto 6</h3>
+                <p class="project-desc">Descripción breve del proyecto. Regresión geográficamente ponderada (GWR).</p>
+                <div class="project-tags">
+                    <span class="tag">QGIS</span>
+                    <span class="tag">GWR</span>
+                </div>
+                <a href="#" class="project-link">
+                    <span>Ver Proyecto</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <span class="logo-bracket">[</span>EST<span class="logo-accent">334</span><span class="logo-bracket">]</span>
+            </div>
+            <p class="footer-text mono-text">Portafolio Académico · Estadística Espacial · UNA Puno · 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+---
+title: "Tarea 1: Conceptos Base y Sistemas de Coordenadas"
+subtitle: "Estadística Espacial (EST334) - UNA Puno"
+author: "Clever Joel Mamani Ari / 217520"
+format: 
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Contenido"
+    smooth-scroll: true
+---
+
+## 1. Introducción a la Estadística Espacial
+La estadística espacial es una rama de la estadística que integra la ubicación topológica, espacial o geográfica en el análisis de los datos. A diferencia de la estadística tradicional, la estadística espacial parte del principio de que los datos cercanos en el espacio tienden a ser más similares que los distantes (Primera Ley de la Geografía de Tobler).
+
+## 2. Conceptos Fundamentales
+* **Dato Espacial:** Información asociada a una ubicación. Se compone de geometría y atributos.
+* **Dependencia Espacial:** La relación o influencia que existe entre los valores de una variable en diferentes ubicaciones.
+* **Autocorrelación Espacial:** La medida del grado en que los objetos espaciales y sus valores tienden a agruparse o dispersarse.
+
+## 3. Sistemas de Coordenadas
+Existen principalmente dos tipos:
+
+### 3.1. Coordenadas Geográficas (SCG)
+Utilizan una superficie esférica tridimensional. Un punto se referencia mediante longitud y latitud (grados decimales).
+
+### 3.2. Coordenadas Proyectadas (SCP)
+Se definen sobre una superficie plana bidimensional. Poseen longitudes, ángulos y áreas constantes (medidas en metros).
+
+| Característica | Coordenadas Geográficas | Coordenadas Proyectadas |
+|---|---|---|
+| **Superficie** | Esférica / Tridimensional | Plana / Bidimensional |
+| **Unidad** | Grados decimales | Metros, pies (X, Y) |
+| **Uso** | Posicionamiento global | Análisis espacial, distancias |
+
+## 4. Datum y Proyección UTM
+El **Datum** estándar actual es el WGS 84. El sistema **UTM** divide la Tierra en 60 zonas. El territorio de Perú se encuentra en las zonas UTM 17, 18 y 19 Sur. (Puno se ubica en la Zona 19 Sur).
